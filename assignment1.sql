@@ -100,3 +100,12 @@
 	US Airways Inc.	6750
 	Virgin America	2184
 */
+-- Code to extract data to CSV
+
+SELECT *
+INTO OUTFILE 'c:/data/flights/myflightdata.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY ""
+ESCAPED BY '\\'
+LINES TERMINATED BY '\n'
+FROM flights;
